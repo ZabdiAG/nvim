@@ -42,3 +42,5 @@ require("lazy").setup({
 -- 4. LOAD YOUR GLOBAL KEYMAPS
 -- Load this *after* lazy so that plugin-related commands are available if needed.
 require("config.keymaps")
+
+require("config.autocmds")

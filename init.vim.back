@@ -46,41 +46,6 @@ autocmd FileType gitcommit,git setlocal foldmethod=syntax
 "" jq, JSON prettier file
 map <leader>jq :%!jq . <CR>
 
-set t_Co=256              " enable 256-color mode.
-
-" https://github.com/lifepillar/pgsql.vim
-let g:sql_type_default = 'pgsql'
-
-" Highlight characters that go over 100 columns (by drawing a border on the 101st)
-if exists('+colorcolumn')
-  set colorcolumn=120 " sets 120 characters line length max
-  " highlight ColorColumn ctermbg=white
-else
-  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-  match OverLength /\%101v.\+/
-endif
-
-
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype go setlocal tabstop=4 sw=4 sts=4
-autocmd Filetype json setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype vim setlocal ts=2 sw=2 sts=0 tabstop
-autocmd Filetype ruby setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype lua setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype org setlocal ts=2 sw=2 sts=0 expandtab
-
-
-"" Set list, show tab characters
-set list
-set listchars=tab:▸·
-
-"" Set clipboard with yank copy
-"" https://stackoverflow.com/questions/677986/how-to-copy-a-selection-to-the-os-x-clipboard
-set clipboard=unnamed
-
-
 " Disable quote concealing in JSON files
 let g:vim_json_conceal=0
 

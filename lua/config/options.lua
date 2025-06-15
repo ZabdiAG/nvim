@@ -1,3 +1,4 @@
+vim.cmd('filetype plugin indent on')
 
 -- Set editor options
 vim.opt.number = true
