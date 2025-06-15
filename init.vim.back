@@ -27,31 +27,13 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugin list
 call plug#begin() " $HOME/.local/share/nvim/plugged
-	" MUST
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim' , { 'tag': '0.1.8' }
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-	Plug 'nvim-orgmode/orgmode'
-
-	" Code related
-	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-	Plug 'cespare/vim-toml'
-	Plug 'rust-lang/rust.vim'
-	Plug 'https://github.com/lifepillar/pgsql.vim'
-	Plug 'hashivim/vim-terraform'
-	Plug 'cappyzawa/starlark.vim'
 
 	Plug 'lukas-reineke/indent-blankline.nvim', { 'branch': 'lua' }
-	Plug 'lukas-reineke/headlines.nvim'
 	Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'} " Replace <CurrentMajor> by the latest released major (first number of latest release)
 
 	"" Smooth scrolling
 	"" https://github.com/karb94/neoscroll.nvim
 	Plug 'karb94/neoscroll.nvim'
-
-	"" Themes
-	Plug 'rebelot/kanagawa.nvim'
 
 	" Experimenting
 	Plug 'neovim/nvim-lspconfig'
