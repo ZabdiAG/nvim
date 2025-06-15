@@ -21,3 +21,16 @@ local function insert_uuid()
   vim.api.nvim_put({ uuid }, "c", true, true)
 end
 keymap("n", "<leader>uuid", insert_uuid, { desc = "Insert UUID" })
+
+--Location List
+keymap('n', '<leader>lo', ':lwindow<CR>', { desc = '[L]ocation [O]pen Window' })
+keymap('n', '<leader>lq', ':lclose<CR>', { desc = '[L]ocation [Q]uit Window' })
+keymap('n', '<leader>ln', ':lnext<CR>', { desc = '[L]ocation [N]ext Item' })
+keymap('n', '<leader>lp', ':lprevious<CR>', { desc = '[L]ocation [P]revious Item' })
+
+--Quickfix List
+keymap('n', '<leader>ko', ':cwindow<CR>', { desc = '[Q]uickfix [O]pen Window' })
+keymap('n', '<leader>kq', ':cclose<CR>', { desc = '[Q]uickfix [Q]uit Window' })
+keymap('n', '<leader>kn', ':cnext<CR>', { desc = '[Q]uickfix [N]ext Item' })
+keymap('n', '<leader>kp', ':cprevious<CR>', { desc = '[Q]uickfix [P]revious Item' })
+keymap('n', '<leader>kf', ':cfile %<CR>', { desc = '[Q]uickfix open [F]ile under cursor' })
