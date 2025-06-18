@@ -23,6 +23,19 @@ return {
         side = "right",
         width = 30, -- you can set the width of the explorer window
       },
+
+      git = {
+        enable = true,
+      },
+
+      filters = {
+        git_ignored = false,
+        dotfiles = false,
+        git_clean = false,
+        no_buffer = false,
+        custom = { 'node_modules' },
+        dotfiles = false,
+      },
       
       -- Recommended settings for a better experience
       renderer = {
