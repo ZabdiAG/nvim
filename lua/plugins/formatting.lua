@@ -16,6 +16,7 @@ return {
     -- This is where you configure formatters
     formatters_by_ft = {
       go = { 'goimports', 'gofumpt' }, -- We'll define these below
+      ruby = { 'rubocop' },
       -- You can add other languages here
       -- lua = { 'stylua' },
       -- python = { 'black' },
@@ -29,5 +30,13 @@ return {
     --     -- args = { '-local', 'github.com/your-org' }, -- Example: for goimports -local flag
     --   },
     -- },
+    formatters = {
+      rubocop = {
+      -- You can add extra arguments here.  For example, to use a specific config file:
+      extra_args = { "--config", vim.fn.getcwd() .. "/.rubocop.yml" },
+      -- Or to fully override the arguments:
+      -- args = { "--server", "-f", "quiet", "--stderr", "--stdin" },
+      },
+    },
   },
 }
