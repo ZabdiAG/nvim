@@ -34,3 +34,6 @@ keymap('n', '<leader>kq', ':cclose<CR>', { desc = '[Q]uickfix [Q]uit Window' })
 keymap('n', '<leader>kn', ':cnext<CR>', { desc = '[Q]uickfix [N]ext Item' })
 keymap('n', '<leader>kp', ':cprevious<CR>', { desc = '[Q]uickfix [P]revious Item' })
 keymap('n', '<leader>kf', ':cfile %<CR>', { desc = '[Q]uickfix open [F]ile under cursor' })
+
+-- Pretty Print JSON
+keymap('n', '<leader>jq', ':%!jq . <CR>', { desc = '[jq] Pretty Print' })

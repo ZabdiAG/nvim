@@ -36,9 +36,6 @@ autocmd FileType yaml,yml setlocal foldmethod=indent
 autocmd FileType gitcommit,git setlocal foldmethod=syntax
 
 
-"" jq, JSON prettier file
-map <leader>jq :%!jq . <CR>
-
 " Disable quote concealing in JSON files
 let g:vim_json_conceal=0
 
