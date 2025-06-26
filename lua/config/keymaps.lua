@@ -36,4 +36,10 @@ keymap('n', '<leader>kp', ':cprevious<CR>', { desc = '[Q]uickfix [P]revious Item
 keymap('n', '<leader>kf', ':cfile %<CR>', { desc = '[Q]uickfix open [F]ile under cursor' })
 
 -- Pretty Print JSON
-keymap('n', '<leader>jq', ':%!jq . <CR>', { desc = '[jq] Pretty Print' })
+-- 1. Define a custom command that can filter a range through jq
+--    -range=% means it takes a range, defaulting to the whole file (%) if none is given.
+vim.cmd([[ command! -range=% JQFormat <line1>,<line2>!jq . ]])
+
+-- 2. Create a single keymap for BOTH normal and visual mode
+--    This keymap simply calls your new custom command.
+vim.keymap.set({'n', 'v'}, '<leader>jq', ':JQFormat<CR>', { desc = '[jq] Pretty Print' })
