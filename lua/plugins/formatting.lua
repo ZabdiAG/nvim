@@ -17,6 +17,7 @@ return {
     formatters_by_ft = {
       go = { 'goimports', 'gofumpt' }, -- We'll define these below
       ruby = { 'rubocop' },
+      proto = { 'buf' },
       -- You can add other languages here
       -- lua = { 'stylua' },
       -- python = { 'black' },
@@ -38,5 +39,6 @@ return {
       -- args = { "--server", "-f", "quiet", "--stderr", "--stdin" },
       },
     },
+      buf = {},
   },
 }
