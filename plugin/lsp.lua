@@ -9,7 +9,7 @@ lspconfig.gopls.setup {
   capabilities = require('cmp_nvim_lsp').default_capabilities(), -- If you're using cmp for autocompletion
   on_attach = function(client, bufnr)
     -- Enable key mappings specific to this buffer for LSP
-    vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { buffer = bufnr, desc = 'Show diagnostics' })
+    vim.keymap.set('n', '<leader>er', vim.diagnostic.open_float, { buffer = bufnr, desc = 'Show diagnostics' })
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { buffer = bufnr, desc = 'Go to previous diagnostic' })
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { buffer = bufnr, desc = 'Go to next diagnostic' })
     vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { buffer = bufnr, desc = 'Show diagnostics in quickfix' })
