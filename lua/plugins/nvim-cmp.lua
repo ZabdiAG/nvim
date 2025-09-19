@@ -5,7 +5,6 @@ return {
   },
   config = function()
     local cmp = require('cmp')
-
     cmp.setup({
       sources = {
         { name = 'nvim_lsp' },
@@ -20,6 +19,5 @@ return {
         ['<C-k>'] = cmp.mapping.select_prev_item(),
       }),
     })
-
   end
 }
