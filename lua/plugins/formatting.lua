@@ -18,6 +18,7 @@ return {
       go = { 'goimports', 'gofumpt' }, -- We'll define these below
       ruby = { 'rubocop' },
       proto = { 'buf' },
+      json = { 'jq' },
       -- You can add other languages here
       -- lua = { 'stylua' },
       -- python = { 'black' },
@@ -33,12 +34,15 @@ return {
     -- },
     formatters = {
       rubocop = {
-      -- You can add extra arguments here.  For example, to use a specific config file:
-      extra_args = { "--config", vim.fn.getcwd() .. "/.rubocop.yml" },
-      -- Or to fully override the arguments:
-      -- args = { "--server", "-f", "quiet", "--stderr", "--stdin" },
+        -- You can add extra arguments here.  For example, to use a specific config file:
+        extra_args = { "--config", vim.fn.getcwd() .. "/.rubocop.yml" },
+        -- Or to fully override the arguments:
+        -- args = { "--server", "-f", "quiet", "--stderr", "--stdin" },
+      },
+      buf = {},
+      jq = {
+        args = { '--indent', '4' },
       },
     },
-      buf = {},
   },
 }

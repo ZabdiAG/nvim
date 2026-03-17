@@ -29,6 +29,14 @@ vim.api.nvim_create_autocmd('FileType', {
 
 vim.api.nvim_create_autocmd('FileType', {
   group = ft_group,
+  pattern = 'json',
+  callback = function()
+    set_tabs(4, true) -- 4 spaces
+  end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  group = ft_group,
   pattern = 'go',
   callback = function()
     set_tabs(4, false) -- 4-width hard tabs
