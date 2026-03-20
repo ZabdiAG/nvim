@@ -27,13 +27,13 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-  group = ft_group,
-  pattern = 'json',
-  callback = function()
-    set_tabs(4, true) -- 4 spaces
-  end,
-})
+--vim.api.nvim_create_autocmd('FileType', {
+  --group = ft_group,
+  --pattern = 'json',
+  --callback = function()
+    --set_tabs(4, true) -- 4 spaces
+  --end,
+--})
 
 vim.api.nvim_create_autocmd('FileType', {
   group = ft_group,

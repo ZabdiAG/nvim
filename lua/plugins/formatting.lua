@@ -18,7 +18,7 @@ return {
       go = { 'goimports', 'gofumpt' }, -- We'll define these below
       ruby = { 'rubocop' },
       proto = { 'buf' },
-      json = { 'jq' },
+      --json = { 'jq' },
       -- You can add other languages here
       -- lua = { 'stylua' },
       -- python = { 'black' },
@@ -40,9 +40,9 @@ return {
         -- args = { "--server", "-f", "quiet", "--stderr", "--stdin" },
       },
       buf = {},
-      jq = {
-        args = { '--indent', '4' },
-      },
+      --jq = {
+        --args = { '--indent', '4' },
+      --},
     },
   },
 }
