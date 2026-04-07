@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "main",
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
@@ -24,4 +25,3 @@ return {
     vim.keymap.set("n", "za", "za", { desc = "Toggle fold" })
   end,
 }
-
