@@ -51,5 +51,7 @@ return {
     })
     vim.lsp.config('pyright', {})
     vim.lsp.config('rust_analyzer', {})
+    vim.lsp.config('terraformls', {})
+    vim.lsp.config('tflint', {})
   end
 }

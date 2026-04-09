@@ -14,3 +14,8 @@ vim.opt.listchars = { tab = '▸·' }
 -- Global variables for plugins
 vim.g.sql_type_default = 'pgsql'
 vim.g.vim_json_conceal = 0 -- Disable quote concealing in JSON
+
+-- Folding
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"

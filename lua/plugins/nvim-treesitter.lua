@@ -7,7 +7,7 @@ return {
     require("nvim-treesitter").setup({})
 
     -- Install parsers if missing
-    local ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html", "go", "python", "rust", "json", "yaml" }
+    local ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html", "go", "python", "rust", "json", "yaml", "terraform", "hcl" }
     local installed = require("nvim-treesitter").get_installed()
     local to_install = vim.tbl_filter(function(lang)
       return not vim.tbl_contains(installed, lang)
@@ -26,7 +26,5 @@ return {
         vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
       end,
     })
-
-    vim.keymap.set("n", "za", "za", { desc = "Toggle fold" })
   end,
 }

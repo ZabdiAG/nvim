@@ -13,7 +13,7 @@ local ft_group = vim.api.nvim_create_augroup('FileTypeSettings', { clear = true 
 -- Define settings for each filetype
 vim.api.nvim_create_autocmd('FileType', {
   group = ft_group,
-  pattern = 'javascript,json,ruby,lua,html,org',
+  pattern = 'javascript,json,ruby,lua,html,org,terraform,hcl',
   callback = function()
     set_tabs(2, true) -- 2 spaces
   end,

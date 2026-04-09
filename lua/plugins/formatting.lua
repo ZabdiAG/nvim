@@ -18,6 +18,8 @@ return {
       go = { 'goimports', 'gofumpt' }, -- We'll define these below
       ruby = { 'rubocop' },
       proto = { 'buf' },
+      terraform = { 'terraform_fmt' },
+      hcl = { 'hclfmt' },
       --json = { 'jq' },
       -- You can add other languages here
       -- lua = { 'stylua' },
