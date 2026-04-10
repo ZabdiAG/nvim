@@ -21,7 +21,7 @@ return {
       -- This is the equivalent of `let g:NERDTreeWinPos = "right"`
       view = {
         side = "right",
-        width = 30, -- you can set the width of the explorer window
+        width = 35, -- you can set the width of the explorer window
       },
 
       git = {
