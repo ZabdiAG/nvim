@@ -50,3 +50,9 @@ vim.api.nvim_create_autocmd('FileType', {
     set_tabs(2, false) -- 2-width hard tabs
   end,
 })
+
+vim.filetype.add({
+  filename = {
+    ['Tiltfile'] = 'starlark',
+  },
+})
