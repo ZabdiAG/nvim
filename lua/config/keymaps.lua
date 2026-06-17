@@ -22,6 +22,19 @@ local function insert_uuid()
 end
 keymap("n", "<leader>uuid", insert_uuid, { desc = "Insert UUID" })
 
+-- Copy relative file path to clipboard
+keymap("n", "<leader>xx", function()
+  local path = vim.fn.expand("%")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Copy relative file path" })
+
+keymap("n", "<leader>xc", function()
+  local ref = vim.fn.expand("%") .. ":" .. vim.fn.line(".")
+  vim.fn.setreg("+", ref)
+  vim.notify("Copied: " .. ref)
+end, { desc = "Copy relative file path with line number" })
+
 --Location List
 keymap('n', '<leader>lo', ':lwindow<CR>', { desc = '[L]ocation [O]pen Window' })
 keymap('n', '<leader>lq', ':lclose<CR>', { desc = '[L]ocation [Q]uit Window' })
