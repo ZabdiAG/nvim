@@ -1,9 +1,15 @@
 return {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
-    opts = {},
+    opts = {
+        -- Don't hide concealed text while rendering. Combined with the json
+        -- highlights override in queries/json/highlights.scm, this keeps quotes
+        -- visible inside json code blocks. Note: this also disables hiding of
+        -- raw markdown markup (e.g. **bold** markers, link URLs).
+        win_options = {
+            conceallevel = { rendered = 0 },
+        },
+    },
 }
