@@ -35,6 +35,9 @@ keymap("n", "<leader>xc", function()
   vim.notify("Copied: " .. ref)
 end, { desc = "Copy relative file path with line number" })
 
+keymap("n", "<leader>xr", ":GBrowse!<CR>", { desc = "Copy relative git remote ref" })
+keymap("v", "<leader>xr", ":GBrowse!<CR>", { desc = "Copy relative git remote ref with line number" })
+
 --Location List
 keymap('n', '<leader>lo', ':lwindow<CR>', { desc = '[L]ocation [O]pen Window' })
 keymap('n', '<leader>lq', ':lclose<CR>', { desc = '[L]ocation [Q]uit Window' })
