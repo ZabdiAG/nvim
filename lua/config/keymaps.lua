@@ -29,7 +29,7 @@ keymap("n", "<leader>xx", function()
   vim.notify("Copied: " .. path)
 end, { desc = "Copy relative file path" })
 
-keymap("n", "<leader>xc", function()
+keymap("v", "<leader>xx", function()
   local ref = vim.fn.expand("%") .. ":" .. vim.fn.line(".")
   vim.fn.setreg("+", ref)
   vim.notify("Copied: " .. ref)
