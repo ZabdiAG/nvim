@@ -7,27 +7,21 @@ return {
     'hrsh7th/cmp-nvim-lsp',
   },
   config = function()
+    -- Diagnostic display is global state, not per-buffer or per-client.
+    vim.diagnostic.config({
+      virtual_text = { spacing = 2 },
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+      severity_sort = true,
+    })
+
     vim.lsp.config('gopls', {
       -- Pass capabilities from cmp-nvim-lsp
       capabilities = require('cmp_nvim_lsp').default_capabilities(),
-      -- The on_attach function remains the same
-      on_attach = function(client, bufnr)
-        -- Configure diagnostic behavior
-        vim.diagnostic.config({
-          virtual_text = { spacing = 2, severity_sort = true },
-          signs = true,
-          underline = true,
-          update_in_insert = false,
-          severity = {
-            min = vim.diagnostic.severity.HINT,
-          },
-        }, bufnr)
-      end,
       settings = {
-        golang = {
-          gopls = {
-            staticcheck = true,
-          },
+        gopls = {
+          staticcheck = true,
         },
       },
     })
